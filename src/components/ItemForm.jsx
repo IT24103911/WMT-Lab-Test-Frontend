@@ -4,6 +4,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
   const [formData, setFormData] = useState(
     initialValues || {
       name: "",
+      modelNumber: "",
       category: "",
       price: "",
       description: "",
@@ -30,6 +31,9 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
 
       <label>Item Name</label>
       <input name="name" value={formData.name} onChange={handleChange} required />
+
+      <label>Model Number</label>
+      <input name="modelNumber" value={formData.modelNumber} onChange={handleChange} required />
 
       <label>Category</label>
       <input name="category" value={formData.category} onChange={handleChange} required />
